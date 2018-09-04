@@ -1,5 +1,8 @@
 <?php
+//这是一个从知乎爬取用户头像的爬虫
 //目录下需要有img文件夹，该文件夹内需要有pic1.zhimg.com等4个文件夹，pic1,pic2,pic3,pic4加.zhimg.com
+$cookie="";//必须输入登录后的cookie
+
 set_time_limit(0); //设置php文件执行时间
 
 function select($dbh,$value)  //从数据库取出url
@@ -64,7 +67,6 @@ function getImg($url,$file)
 }
 
 $url = 'https://www.zhihu.com/people/li-wei-76-42-1/following';
-$cookie="_zap=7b4ed041-82ff-4da7-a861-beb7d5d30754; _xsrf=17972711-70a1-401a-9d62-ac7e2b31ac4a; d_c0=\"AABmeD_UEQ6PTs_pp43BL9ZK_sZD9BOirsg=|1534494658\"; q_c1=13b99bb546ef434998559910b52a4ad6|1534494700000|1534494700000; capsion_ticket=\"2|1:0|10:1534498835|14:capsion_ticket|44:MWEyYTE2NjNiNjM2NGRhMWE4YjAxNjRlY2IzZmM1Y2U=|4495b59a901310fa01f74d7ab84cf4dce4d715f6e1237ad78f86917ecaf8106a\"; z_c0=\"2|1:0|10:1534498877|4:z_c0|92:Mi4xNFdLYkF3QUFBQUFBQUdaNFA5UVJEaVlBQUFCZ0FsVk5QT1pqWEFDemtnY1VWdmQ3VzhJYTJpcnhnenNuWWV2VWxR|d556b2035373486c278c6a66405dc87b6d0d8a65d6774043b0359f3e2cf64682\"; __utma=51854390.1919606059.1535700680.1535700680.1535700680.1; __utmc=51854390; __utmz=51854390.1535700680.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=51854390.100--|2=registration_date=20161023=1^3=entry_date=20161023=1; tgw_l7_route=29b95235203ffc15742abb84032d7e75";
 $id=1;
 $num=0;
 $max=5;
